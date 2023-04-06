@@ -1,0 +1,21 @@
+﻿@model CityMvc.Models.Sehir
+
+<h2>Yeni Şehir Ekle</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="SehirAdi" class="control-label"></label>
+        <input asp-for="SehirAdi" class="form-control" />
+        <span asp-validation-for="SehirAdi" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="UlkeAdi" class="control-label"></label>
+        <input asp-for="UlkeAdi" class="form-control" />
+        <span asp-validation-for="UlkeAdi" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Kaydet" class="btn btn-primary" />
+    </div>
+</form>
+
+<a asp-action="Index">Geri Dön</a>
