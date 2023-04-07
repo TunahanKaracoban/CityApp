@@ -1,18 +1,16 @@
+
+
 using CityMvc.RepositoryMvc.Abstract;
 using CityMvc.RepositoryMvc.Concrete;
-using CityWebApi.Repository.Abstract;
-using CityWebApi.Repository.Concrete;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Configuration.AddJsonFile("appsettings.json", optional: false);
-builder.Services.AddScoped<ISehirRepository, SehirRepository>();
-builder.Services.AddHttpClient<ISehirRepository, SehirRepository>(client =>
-{
-    client.BaseAddress = new Uri(builder.Configuration["WebApiBaseUrl"]);
-});
+
+builder.Services.AddHttpClient();
+
+builder.Services.AddScoped<ICityRepository, CityRepository>();
 
 var app = builder.Build();
 
@@ -33,6 +31,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Sehir}/{action=Index}/{id?}");
+    pattern: "{controller=City}/{action=Index}/{id?}");
 
 app.Run();
