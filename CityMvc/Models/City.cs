@@ -1,6 +1,6 @@
 ﻿namespace CityMvc.Models
 {
-    public class CityViewModel
+    public class City
     {
         public int Id { get; set; }
         public string CityName { get; set; }

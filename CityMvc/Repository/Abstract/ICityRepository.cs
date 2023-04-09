@@ -1,14 +1,15 @@
-﻿using CityWebApi.Models;
+﻿using CityMvc.Models;
 using System.Linq.Expressions;
 
-namespace CityMvc.RepositoryMvc.Abstract
+namespace CityMvc.Repository.Abstract
 {
-    public interface ICityRepository
+    public interface ICityRepository 
     {
         Task<List<City>> GetAllAsync(Expression<Func<City, bool>> filter = null);
-        Task<City> GetAsync(Expression<Func<City, bool>> filter = null, bool tracked = true);
+        Task<City> GetAsync(Expression<Func<City, bool>> filter = null);
         Task CreateAsync(City entity);
         Task RemoveAsync(City entity);
+
         Task UpdateAsync(City entity);
         Task SaveAsync();
     }

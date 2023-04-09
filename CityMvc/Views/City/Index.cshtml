@@ -1,4 +1,4 @@
-﻿@model IEnumerable<CityViewModel>
+﻿@model IEnumerable<City>
 
 <h2>Cities</h2>
 
@@ -10,7 +10,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model =>model.CityName)
+                @Html.DisplayNameFor(model => model.CityName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.CountryName)
@@ -36,3 +36,4 @@
         }
     </tbody>
 </table>
+
