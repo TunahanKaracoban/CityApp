@@ -8,7 +8,7 @@ Bu projeyi çalıştırmak için aşağıdaki bileşenlere ihtiyacınız var
 - MS SQL Server.
 ## Proje Açıklaması
 ### Web API Projesi:
-- Web API projesinde, Entity Framework kullanarak Sehirler tablosu oluşturuldu ve bu tabloyu CRUD işlemleri gerçekleştirecek şekilde tasarladık.
+- Web API projesinde, Entity Framework kullanarak Sehirler tablosu oluşturuldu ve bu tabloyu CRUD işlemleri gerçekleştirecek şekilde tasarlandı.
 - Sehirler tablosu, "Id", "SehirAdi" ve "UlkeAdi" sütunlarından oluşmaktadır.
 - CRUD işlemleri, Repository Tasarım Deseni ile gerçekleştirilmiştir.
 ### MVC Projesi:
